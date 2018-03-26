@@ -1,1 +1,7 @@
 # ParisTradingSystem
+It is a trading system prototype.
+It has data feed from Bloomberg terminal and *simulates* to execute real time trading automatically (simulate because my access to Bloomberg gives me real-time data 15 mins delay). This system can do backtesting and calculate pnl. Moreover, it can handle real time data flow using Bloomberg API and decide when to take the position. Meanwhile, it manages tables in Microsoft Access database using ADO. The database can track the automatic trade we have done and show pnl.
+1.	The prerequire of the project is to have pairs ready. The file is called Pairs.csv. You can change this file with your own pairs. Here I do not test the stationarity and co-integration. I assume that the pairs are good. 
+2.	The trading strategy is very simple. The spread is defined as the difference in logarithms of the prices: log(PAt) − log(PBt). Ignore the margin and transaction cost.
+3.	Assume the last trade price as the available trade price. Do not consider bid and ask price.
+If you have access to Bloomberg terminal, please have it running in the background. In this way, the project can have a connection to Bloomberg. To have the full function of the project, you need to set up BLP library in your own visual studio project(refer to “Bloomberg API”). And then you can play with it – download historical data, set threshold, start real time trading simulation, set window…
