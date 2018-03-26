@@ -1,5 +1,4 @@
-# ParisTradingSystem
-It is a trading system prototype.
+# Paris Trading System in C++ #
 It has data feed from Bloomberg terminal and *simulates* to execute real time trading automatically (simulate because my access to Bloomberg gives me real-time data 15 mins delay). This system can do backtesting and calculate pnl. Moreover, it can handle real time data flow using Bloomberg API and decide when to take the position. Meanwhile, it manages tables in Microsoft Access database using ADO. The database can track the automatic trade we have done and show pnl.
 1.	The prerequire of the project is to have pairs ready. The file is called Pairs.csv. You can change this file with your own pairs. Here I do not test the stationarity and co-integration. I assume that the pairs are good. 
 2.	The trading strategy is very simple. The spread is defined as the difference in logarithms of the prices: log(PAt) − log(PBt). Ignore the margin and transaction cost.
